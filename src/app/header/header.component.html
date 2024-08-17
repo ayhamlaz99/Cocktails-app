@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+   <div class="container px-md-5">
+      <a class="navbar-brand">Cocktaila</a>
+      <div class="ms-auto me-2 d-block d-md-none">
+         <span class="btn btn-outline-light border-2 rounded-pill mx-auto" (click)="logging()">
+            <b>{{ loggedIn ? 'logout' : 'Login' }}</b>
+         </span>
+      </div>
+      <button class="navbar-toggler border border-2 border-light" type="button" data-bs-toggle="collapse"
+         data-bs-target="#navbarTogglerDemo01">
+         <b><span class="navbar-toggler-icon"></span></b>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+         <ul ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link active" routerLink="/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link active" routerLink="/cocktails-by-first-letter/a">Cocktails</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link active" routerLink="/ingredients">Ingredients</a>
+            </li>
+         </ul>
+         <div class="ms-auto me-2 d-none d-md-block">
+            <span class="btn btn-outline-light border-2 rounded-pill mx-auto" (click)="logging()">
+               <b>{{ loggedIn ? 'logout' : 'Login' }}</b>
+            </span>
+         </div>
+         <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" name="search" [(ngModel)]="text" placeholder="Search"
+               aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"
+               [routerLink]="text == '' ? ['/404'] :['/cocktail-details','0',text]">Search <i
+                  class="bi bi-search"></i></button>
+         </form>
+      </div>
+   </div>
+</nav>

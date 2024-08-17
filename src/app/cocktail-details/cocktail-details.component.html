@@ -1,0 +1,28 @@
+<section class="page">
+
+   <div class="container">
+
+      <div class="card mb-3 border-primary mx-auto overflow-hidden" style="max-width: 800px;" *ngIf="cocktail">
+         <div class="row g-0">
+            <div class="col-md-6">
+               <img [src]="cocktail.drinkThumb" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 pb-5" style="position: relative;">
+               <div class="card-body">
+                  <h5 class="card-title fs-2">{{cocktail.drink}}</h5>
+                  <p class="card-text">{{cocktail.instructions}}</p>
+                  <p class="card-text"><b>Category : </b>{{cocktail.category}}</p>
+                  <p class="card-text"><b>Alcoholic : </b>{{cocktail.alcoholic}}</p>
+                  <p class="card-text"><b>Ingredients : </b>{{cocktail.ingredients.join(', ')}}</p>
+                  <p class="card-text" *ngIf="cocktail.drinkAlternate"><b>Alternate : </b>{{cocktail.drinkAlternate}}</p>
+               </div>
+               <div class="card-footer w-100" style="position: absolute; bottom: 0;">
+                  <small class="text-muted">{{cocktail.dateModified}}</small>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+</section>

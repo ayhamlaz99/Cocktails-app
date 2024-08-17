@@ -1,0 +1,132 @@
+/* Page Body Start */
+section.page {
+   padding-block: 50px;
+}
+
+/* Page Body End */
+
+
+/* Navbar Start */
+.navbar-toggler:focus {
+   box-shadow: none !important;
+}
+
+/* Navbar End */
+
+
+/* Buttons Start */
+.btn {
+   white-space: nowrap;
+}
+
+/* Buttons End */
+
+/* Cards Start */
+.card {
+   border: 2px solid #aaa !important;
+   border-radius: 35px !important;
+}
+
+.card-text {
+   overflow-y: auto;
+   max-height: 300px;
+}
+
+.card-footer {
+   border-top: 2px dashed #eee !important;
+   background-color: transparent !important;
+}
+
+/* Cards End */
+
+
+/* DirectiveS Classes Start*/
+.highlight {
+   animation: biger 300ms;
+   border-bottom: 4px solid #0d6efd !important;
+   transform: scale(1.01) !important;
+}
+
+@keyframes biger {
+   from {
+      transform: scale(1) !important;
+      border-bottom: 0px solid #666 !important;
+   }
+
+   to {
+      border-bottom: 4px solid #0d6efd !important;
+      transform: scale(1.01) !important;
+   }
+
+}
+
+/* DirectiveS Classes End*/
+
+
+/* Scrollbar Start */
+@media (min-width: 992px) {
+   body::-webkit-scrollbar-track {
+      margin: 0px;
+   }
+
+   ::-webkit-scrollbar {
+      width: 9px;
+      height: 9px;
+   }
+
+   ::-webkit-scrollbar-track {
+      margin: 8px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: #0d6efd66;
+      border: 2px solid #fff;
+      border-radius: 6px;
+   }
+
+   ::-webkit-scrollbar-thumb:hover {
+      background: #0d6efd;
+   }
+}
+
+/* Scrollbar End */
+
+
+/* Containters Start */
+.table-containter {
+   border: 2px solid #0d6efd;
+   border-radius: 15px;
+   position: relative;
+   overflow-y: auto;
+   height: 500px;
+   padding: 8px;
+}
+
+tr {
+   white-space: nowrap;
+   border-bottom: 1px solid #aaa !important;
+   transform: scale(1.0) !important;
+   transition: 300ms;
+}
+
+td,
+th {
+   text-align: center !important;
+}
+
+.ingredient-containter {
+   border: 2px solid #0d6efd;
+   border-radius: 15px;
+}
+
+.ingredient-containter .row {
+   overflow: hidden;
+}
+
+.ingredient-containter .col-md-6 {
+   border-bottom: 0px solid #666;
+   transform: scale(1.0);
+   transition: 300ms;
+}
+
+/* Containters End */

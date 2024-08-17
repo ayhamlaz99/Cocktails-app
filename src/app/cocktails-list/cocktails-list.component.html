@@ -1,0 +1,38 @@
+<section class="page">
+   <div class="container">
+      <h1 class="text-center">
+         Fetched cocktails {{fl ? "with the first letter '" + fl + "'" : "by '" + type + "' ingredient"}}
+      </h1>
+      <div class="table-containter">
+         <table class="table" *ngIf="cocktails$ | async as cocktails">
+            <thead>
+               <tr highlight>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th *ngIf="cocktails[0].category" scope="col">Category</th>
+                  <th *ngIf="cocktails[0].alcoholic" scope="col">Alcoholic</th>
+                  <th *ngIf="cocktails[0].ingredients.length > 0" scope="col">Ingredients</th>
+                  <th scope="col">Info</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let drink of cocktails, index as i" highlight>
+                  <th>{{i}}</th>
+                  <td>{{drink.drink}}</td>
+                  <td *ngIf="drink.category">{{drink.category}}</td>
+                  <td *ngIf="drink.alcoholic">{{drink.alcoholic}}</td>
+                  <td *ngIf="drink.ingredients.length > 0">{{drink.ingredients.join(', ')}}</td>
+                  <td><a [routerLink]="['/cocktail-details',drink.id,'0']">more info ->></a></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+
+      <!-- <p style="white-space: nowrap; overflow-x: scroll; scrollbar-width: none;">
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod expedita vel quas alias inventore deserunt
+         dolor
+         quisquam eos, magnam minima voluptatum reiciendis ab a assumenda modi dolorum, ratione sed ducimus.
+      </p> -->
+
+   </div>
+</section>

@@ -1,0 +1,24 @@
+<section class="page">
+
+   <div class="container">
+
+      <div class="card border-primary text-center mb-3 mx-auto" style="max-width: 600px;">
+         <div class="card-body">
+            <h1 class="card-title text-primary">{{ingredient.strIngredient}}</h1>
+            <p class="card-text">{{ingredient.strDescription}}</p>
+            <a [routerLink]="['/cocktails-by-ingredient/',ingredient.strIngredient]"
+               class="btn btn-primary w-75 fs-5 rounded-pill">Drinks</a>
+         </div>
+         <div class="card-footer text-muted">
+            <span class="float-start">
+               <b>Type : </b>{{ingredient.strType}}
+            </span>
+            <span class="float-end">
+               <b>Alcoholic : </b>{{ingredient.strAlcohol}}
+            </span>
+         </div>
+      </div>
+
+   </div>
+
+</section>

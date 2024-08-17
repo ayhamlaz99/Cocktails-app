@@ -1,0 +1,14 @@
+<section class="page">
+   <div class="container">
+
+      <div class="ingredient-containter" *ngIf="ingredients$ | async as ingredients">
+         <div class="row m-0">
+            <div class="col-md-6 py-3" highlight [routerLink]="['/ingredient-details/',ingredient]"
+               *ngFor="let ingredient of ingredients">
+               <h5 class="text-center">{{ingredient}}</h5>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</section>
