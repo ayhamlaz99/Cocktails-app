@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Cocktails-app:build:production"
+              "buildTarget": "Cocktails-app:build:production"
             },
             "development": {
-              "browserTarget": "Cocktails-app:build:development"
+              "buildTarget": "Cocktails-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Cocktails-app:build"
+            "buildTarget": "Cocktails-app:build"
           }
         },
         "test": {
